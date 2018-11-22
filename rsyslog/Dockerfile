@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel7:latest
+FROM centos:7
 
 ADD rsyslog.conf /etc/rsyslog.conf
 RUN yum update -y \
