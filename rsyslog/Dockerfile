@@ -2,7 +2,7 @@ FROM centos:7
 
 ADD rsyslog.conf /etc/rsyslog.conf
 RUN yum update -y \
- && yum -y install rsyslog \
+ && yum -y install rsyslog netstat\
  && yum clean all \
  && rm -rf /var/cache/yum \
  && chmod -R ugo+rw,+X /etc/rsyslog.conf /var/log/ /var/run/
